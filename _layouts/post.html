@@ -1,0 +1,39 @@
+---
+is_post: true
+---
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% include metadata.html %}
+
+    <title>{{ page.title }} @ Flaming Dangerzone</title>
+
+    {% include ga.html %}
+
+  </head>
+
+  <body>
+
+    {% include header.html %}
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <article id="main_content" class="inner">
+
+        <h2 id="post_title">{{ page.title }}</h2>
+        {% if page.author %}
+        <p id="guest_line">a guest post by <a href="{{ page.author_link }}">{{ page.author }}</a></p>
+        {% endif %}
+        {{ content }}
+
+      </article>
+
+    {% include comments.html %}
+
+    {% include footer.html %}
+
+  </body>
+</html>
+

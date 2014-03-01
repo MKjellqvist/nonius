@@ -1,0 +1,27 @@
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+
+        {% if page.is_post %}
+        <p class="post_date">
+          This entry was originally posted on {{ page.date | date_to_long_string }}.
+          {% if page.last_edit %}
+            It was last edited on {{ page.last_edit }}.
+          {% endif %}
+        </p>
+        {% endif %}
+
+        {% if page.doc_version %}
+        <p class="post_date">
+          This documentation applies to version {{ page.doc_version }}.
+        </p>
+        {% endif %}
+
+        <p class="copyright">
+          <a href="/about.html">Flaming Dangerzone</a>
+          authored by
+          <a href="/robot.html">R. Martinho Fernandes</a>
+        </p>
+
+      </footer>
+    </div>
+

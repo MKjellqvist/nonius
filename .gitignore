@@ -1,0 +1,9 @@
+_site/
+*.swp
+.*.swp
+bin/
+obj/
+deps/
+build.ninja
+*.pyc
+
